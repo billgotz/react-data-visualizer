@@ -5,16 +5,16 @@ const mysql = require('mysql');
 const ejsMate = require('ejs-mate');
 
 
-let React = require('react');
-let ReactDOMServer = require('react-dom/server');
+// let React = require('react');
+// let ReactDOMServer = require('react-dom/server');
 
-// class MyComponent extends React.Component {
-//     render() {
-//         return (<div>Hello World</div>);
-//     }
-// }
+// // class MyComponent extends React.Component {
+// //     render() {
+// //         return (<div>Hello World</div>);
+// //     }
+// // }
 
-// ReactDOMServer.renderToString(<MyComponent />);
+// // ReactDOMServer.renderToString(<MyComponent />);
 
 
 const cors = require('cors');
@@ -32,7 +32,7 @@ const db = mysql.createConnection({
     host: process.env.MY_SQL_HOST,
     user: process.env.MY_SQL_USER,
     password: process.env.MY_SQL_PASSWORD,
-    database: process.env.MY_SQL_DATABASE
+    //database: process.env.MY_SQL_DATABASE
 })
 
 // Connect db
@@ -54,7 +54,7 @@ app.get('/createdb', (req, res) => {
 })
 
 app.get('/testresponse', async (req, res) => {
-    let test = 'QWERTYYYYY';
+    let test = 'lmao';
     res.status(200).json(test);
 })
 
